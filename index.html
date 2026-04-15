@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJTI 麻将性格测试：你是哪种牌桌猛兽？</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 首页 -->
+        <div id="home-page" class="page active">
+            <h1>🀄 MJTI 麻将性格测试</h1>
+            <p>你是哪种牌桌猛兽？</p>
+            <button id="start-btn">开始测试</button>
+        </div>
+
+        <!-- 答题页 -->
+        <div id="quiz-page" class="page">
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <p id="question-count" class="question-count"></p>
+            <h2 id="question-text"></h2>
+            <div id="options-container" class="options">
+                <!-- 选项会由JS动态生成 -->
+            </div>
+        </div>
+
+        <!-- 结果页 -->
+        <div id="result-page" class="page">
+            <h2>🎉 你的测试结果是 🎉</h2>
+            <div class="result-type">
+                <h1 id="result-name"></h1>
+                <p id="result-desc"></p>
+            </div>
+            
+            <div class="aspects-container">
+                <h3>维度得分</h3>
+                <div class="aspect-row">
+                    <span class="label left">速攻 (FAST)</span>
+                    <div class="bar-container">
+                        <div id="bar-fast-dream" class="bar fill-left"></div>
+                    </div>
+                    <span class="label right">做大牌 (DREA-M)</span>
+                </div>
+                <!-- 其他维度... JS生成 -->
+                <div class="aspect-row">
+                    <span class="label left">立直 (REAC-H)</span>
+                    <div class="bar-container">
+                        <div id="bar-reach-chii" class="bar fill-left"></div>
+                    </div>
+                    <span class="label right">副露 (CHII)</span>
+                </div>
+                <div class="aspect-row">
+                    <span class="label left">进攻 (ATT-ACK)</span>
+                    <div class="bar-container">
+                        <div id="bar-attack-turtle" class="bar fill-left"></div>
+                    </div>
+                    <span class="label right">防守 (TUR-TLE)</span>
+                </div>
+                <div class="aspect-row">
+                    <span class="label left">科学 (SCI-MJ)</span>
+                    <div class="bar-container">
+                        <div id="bar-sci-flow" class="bar fill-left"></div>
+                    </div>
+                    <span class="label right">玄学 (FLOW)</span>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="secondary-btn">再测一次</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
